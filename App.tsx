@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
+import styles from './styles';
 
 interface State {
   textoFrase: string;
@@ -41,12 +42,12 @@ class App extends Component<{}, State> {
 
   render() {
     return (
-      <View>
-        <Image source={this.state.img} />
-        <Text >{this.state.textoFrase}</Text>
-        <TouchableOpacity onPress={this.quebraBiscoito}>
-          <View >
-            <Text >{this.state.txtBotao}</Text>
+      <View style={styles.container}>
+        <Image source={this.state.img} style={styles.img} />
+        <Text style={styles.textoFrase}>{this.state.textoFrase}</Text>
+        <TouchableOpacity style={styles.botao} onPress={this.quebraBiscoito}>
+          <View style={styles.btnArea}>
+            <Text style={styles.btnTexto}>{this.state.txtBotao}</Text>
           </View>
         </TouchableOpacity>
       </View>
