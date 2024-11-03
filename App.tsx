@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 
 interface State {
   textoFrase: string;
-  img: any; 
+  img: any;
   txtBotao: string;
 }
 
@@ -17,8 +17,16 @@ class App extends Component<{}, State> {
       img: require('./assets/biscoito.png'),
       txtBotao: 'Abrir biscoito',
     };
-    
-    this.frases = [];
+
+    this.frases = [
+      'Siga os bons e aprenda com eles.',
+      'O bom-senso vale mais do que muito conhecimento.',
+      'O riso é a menor distância entre duas pessoas.',
+      'Deixe de lado as preocupações e seja feliz.',
+      'Realize o óbvio, pense no improvável e conquiste o impossível.',
+      'Acredite em milagres, mas não dependa deles.',
+      'A maior barreira para o sucesso é o medo do fracasso.',
+    ];
   }
 
   quebraBiscoito() {
@@ -34,7 +42,7 @@ class App extends Component<{}, State> {
   render() {
     return (
       <View>
-        <Image  />
+        <Image />
         <Text ></Text>
         <TouchableOpacity >
           <View >
