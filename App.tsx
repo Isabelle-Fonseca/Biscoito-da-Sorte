@@ -1,20 +1,39 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+interface State {
+  textoFrase: string;
+  img: any; 
+  txtBotao: string;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+class App extends Component<{}, State> {
+  private frases: string[];
+
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      textoFrase: '',
+      img: require('./assets/biscoito.png'),
+      txtBotao: 'Abrir biscoito',
+    };
+    
+    this.frases = [];
+  }
+
+  render() {
+    return (
+      <View>
+        <Image  />
+        <Text ></Text>
+        <TouchableOpacity >
+          <View >
+            <Text ></Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+}
+
+export default App;
