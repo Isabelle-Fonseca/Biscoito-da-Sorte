@@ -21,6 +21,16 @@ class App extends Component<{}, State> {
     this.frases = [];
   }
 
+  quebraBiscoito() {
+    let numeroAleatorio = Math.floor(Math.random() * this.frases.length);
+
+    this.setState({
+      textoFrase: this.frases[numeroAleatorio],
+      img: require('./assets/biscoitoAberto.png'),
+      txtBotao: 'Resortear',
+    });
+  }
+
   render() {
     return (
       <View>
