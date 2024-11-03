@@ -42,11 +42,11 @@ class App extends Component<{}, State> {
   render() {
     return (
       <View>
-        <Image />
-        <Text ></Text>
-        <TouchableOpacity >
+        <Image source={this.state.img} />
+        <Text >{this.state.textoFrase}</Text>
+        <TouchableOpacity onPress={this.quebraBiscoito}>
           <View >
-            <Text ></Text>
+            <Text >{this.state.txtBotao}</Text>
           </View>
         </TouchableOpacity>
       </View>
